@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MINI worldG · 下载</title>
+<link rel="icon" href="icon-castle.png">
+<style>
+@font-face{font-family:"Heiti";src:url("heiti.woff") format("woff");font-display:swap}
+:root{--bg:#1f3a1a;--ink:#fff8e1;--gold:#ffd54a;--wood:#6b4423;--card:rgba(20,40,16,.82)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Heiti","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg) url(tile-grass.png);background-size:128px;image-rendering:pixelated;color:var(--ink);line-height:1.7;padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;display:block}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:48px 20px;background:linear-gradient(#0008,#1f3a1aee),url(bg-forest.webp) center/cover;image-rendering:auto}
+.hero img.logo{width:96px;margin:0 auto 12px}
+h1{font-size:clamp(40px,10vw,84px);color:var(--gold);text-shadow:0 4px 0 #6b4423,0 8px 18px #000a;letter-spacing:4px}
+.sub{font-size:clamp(16px,3.6vw,22px);margin:10px auto 28px;max-width:560px}
+.btn{display:inline-block;background:var(--gold);color:#3b2410;font-size:24px;padding:14px 38px;border:4px solid var(--wood);border-radius:10px;box-shadow:0 6px 0 var(--wood);text-decoration:none;transition:.1s}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--wood)}
+.meta{margin-top:18px;font-size:14px;opacity:.85}
+section{max-width:980px;margin:0 auto;padding:56px 20px}
+h2{font-size:32px;color:var(--gold);margin-bottom:20px;text-shadow:0 3px 0 #000a}
+.card{background:var(--card);border:4px solid var(--wood);border-radius:12px;padding:22px;box-shadow:0 6px 0 #0006}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.grid .card h3{color:var(--gold);font-size:20px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.shots img{border:4px solid var(--wood);border-radius:10px;width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}
+.band{height:64px;background:url(tile-stone.png);background-size:64px}
+.desert{background:linear-gradient(#1f3a1a,#0000 30%,#0000 70%,#1f3a1a),url(bg-desert.webp) center/cover}
+.log b{color:var(--gold)}
+footer{background:#14240f;text-align:center;padding:28px 20px calc(28px + env(safe-area-inset-bottom));font-size:13px;opacity:.9}
+.top{position:absolute;top:0;left:0;right:0;display:flex;gap:8px;justify-content:flex-end;align-items:center;flex-wrap:wrap;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;z-index:5;font-size:14px}
+.top span{background:#0009;padding:4px 10px;border-radius:8px}
+.sm{font:inherit;font-size:14px;background:var(--gold);color:#3b2410;border:3px solid var(--wood);border-radius:8px;padding:4px 12px;cursor:pointer;text-decoration:none;display:inline-block}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+button.btn{font-family:inherit;cursor:pointer}.btn.alt{background:#8bc34a;font-size:20px}
+dialog{background:#1c3317;color:var(--ink);border:4px solid var(--wood);border-radius:12px;padding:22px;width:min(600px,92vw);max-height:86vh;overflow:auto;font-family:inherit}
+dialog::backdrop{background:#000b}dialog h3{color:var(--gold);font-size:24px;margin-bottom:12px}
+input{width:100%;font:inherit;font-size:16px;padding:10px;margin:6px 0;border:3px solid var(--wood);border-radius:8px;background:#fff8e1;color:#2b1a0a}
+.msg{min-height:1.6em;font-size:14px;color:#ffab91}.msg.ok{color:#c5e1a5}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #fff3;padding:8px 0;font-size:14px}.row span{flex:1;min-width:200px;word-break:break-all}
+textarea{width:100%;font:inherit;font-size:16px;padding:10px;margin:6px 0;border:3px solid var(--wood);border-radius:8px;background:#fff8e1;color:#2b1a0a;resize:vertical}.row span{white-space:pre-wrap}
+</style>
+</head>
+<body>
+<nav class="top"><a class="sm" href="mechanics.html">地图与机制</a><a class="sm" href="rules.html">游戏规则</a></nav>
+<header class="hero"><div>
+<img class="logo" src="icon-castle.png" alt="">
+<h1>MINI worldG</h1>
+<p class="sub">因为官方变了味，所以我们重新开始。<br>公平的审核，干净的聊天，没有外挂的世界。</p>
+<div class="btns"><a class="btn" id="dl" href="https://github.com/egor8281636oi-web/MW020dyegor/releases/download/v0.0.7/mini_world_0_2_0_build.apk">⬇ 下载 APK</a><a class="btn alt" href="https://github.com/egor8281636oi-web/MW020dyegor/releases/download/v0.0.7/create_map__mw__build.apk">⬇ 地图编辑器</a></div>
+<p class="meta">项目版本 v0.0.7（开发阶段） · 安卓 · 约 222 MB</p>
+<p class="meta" style="margin-top:4px">地图编辑器 v0.0.1 · 安卓 · 约 75 MB</p>
+</div></header>
+<div class="band"></div>
+
+<section>
+<h2>为什么做这个游戏？</h2>
+<div class="card"><p>原版迷你世界国际服已经不再更新，审核机制也越来越混乱：无辜的玩家被随意封号，真正的外挂玩家却逍遥法外。游戏变了味，所以我做了这款同人恶搞作品，并亲自担任唯一的管理员，让规则公平透明。</p></div>
+</section>
+
+<section>
+<h2>我们的承诺</h2>
+<div class="grid">
+<div class="card"><h3>🛡 唯一管理员</h3><p>所有处理决定都由我或我亲自任命的版主人工做出，不会乱处罚。</p></div>
+<div class="card"><h3>🗺 地图人工审核</h3><p>每一张地图都会被逐一检查，确保没有违规内容。</p></div>
+<div class="card"><h3>💬 聊天管理</h3><p>及时删除不当消息，保持友好的交流环境。</p></div>
+<div class="card"><h3>⚔ 严打外挂</h3><p>对外挂零容忍，保护每一位诚实的玩家。</p></div>
+</div>
+</section>
+
+<section>
+<h2>本作预告片</h2>
+<div class="card"><video controls preload="metadata" playsinline poster="trailer2-poster.jpg" src="trailer2.mp4" style="width:100%;border-radius:8px;background:#000"></video>
+<p style="margin-top:12px;font-size:14px;opacity:.85">MINI worldG的预告片，画面来自开发中的版本（项目版本 v0.0.7）。</p></div>
+</section>
+
+<section>
+<h2>原版怀旧预告片</h2>
+<div class="card"><video controls preload="metadata" playsinline poster="trailer-poster.jpg" src="trailer.mp4" style="width:100%;border-radius:8px;background:#000"></video>
+<p style="margin-top:12px;font-size:14px;opacity:.85">原版《迷你世界》0.2.x 版本宣传片，版权归原开发商所有，此处仅作怀旧展示。</p></div>
+</section>
+
+<section class="desert" style="max-width:none"><div style="max-width:940px;margin:auto">
+<h2>游戏截图</h2>
+<div class="shots">
+<img src="shot1.webp" alt="游戏截图 1" loading="lazy">
+<img src="shot2.webp" alt="游戏截图 2" loading="lazy">
+<img src="shot3.webp" alt="游戏截图 3" loading="lazy">
+<img src="shot4.webp" alt="游戏截图 4" loading="lazy">
+</div></div></section>
+
+<section>
+<h2>更新日志</h2>
+<div class="card log"><p><b>v0.0.7</b> · 当前版本 · 开发阶段</p><p>游戏仍在早期开发中，尚未正式发布。这里提供的是测试版本，欢迎提前体验。后续更新会第一时间在这里公布。</p><p style="margin-top:10px"><b>地图编辑器 v0.0.1</b> · 当前版本</p></div>
+</section>
+
+<div class="band"></div>
+<footer><a href="mechanics.html" style="color:var(--gold)">地图与机制</a> · <a href="rules.html" style="color:var(--gold)">游戏规则</a><br>本作品为玩家自制同人作品，与官方《迷你世界》无任何关联。<br>© MINI worldG</footer>
+</body>
+</html>
